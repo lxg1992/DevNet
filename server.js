@@ -1,4 +1,5 @@
 const express = require("express");
+const { check, validationResult } = require("express-validator");
 
 const connectDB = require("./config/db");
 const authRoute = require("./routes/api/auth");
@@ -14,18 +15,20 @@ connectDB();
 
 const PORT = process.env.PORT || 5000;
 
+//Init middleware
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) => {
     res.send("Test");
 });
 
+//Define Routes
 app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
 app.use("/api/profile", profileRoute);
 app.use("/api/auth", authRoute);
 
-//Define routes
-//app.use("/api/users");
-
+//Launch server
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 });
