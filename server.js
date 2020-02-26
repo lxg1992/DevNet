@@ -1,5 +1,4 @@
 const express = require("express");
-const { check, validationResult } = require("express-validator");
 
 const connectDB = require("./config/db");
 const authRoute = require("./routes/api/auth");
