@@ -41,11 +41,18 @@ const ProfileSchema = new mongoose.Schema({
             to: {
                 type: String
             },
+            from: {
+                type: Date,
+                required: true
+            },
             current: {
                 type: Boolean,
                 default: false
             },
             description: {
+                type: String
+            },
+            location: {
                 type: String
             }
         }
