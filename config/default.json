@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://lxg1992:modern32@socialnetwork-r2rpk.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "cookie"
+    "jwtSecret": "cookie",
+    "githubClientId": "2bc56929dcd14b8755cb",
+    "githubSecret": "6d56e4a6dd261c61cd188361f318160ecd11944a"
 }
