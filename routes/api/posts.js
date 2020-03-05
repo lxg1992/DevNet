@@ -239,4 +239,6 @@ router.delete("/comment/:post_id/:comment_id", auth, async (req, res) => {
         res.json(500).send("Server error");
     }
 });
+
+//Finished for now
 module.exports = router;
